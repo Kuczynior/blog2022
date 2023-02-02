@@ -1,11 +1,5 @@
-ujyftyyfvhvbjk
-<%= @articles.inspect %>
-
 <% @articles.each do |article| %>
     <li>
       <%= link_to article.title, article %>
     </li>
 <% end %>
-
-
-<%= link_to "New Article", new_article_path, class: "btn btn-primary" %>
