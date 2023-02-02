@@ -3,14 +3,19 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  resources :pages do
-    collection do 
+  root "articles#index"
+  resources :articles do
+    resources :comments
+      resources :pages do
+        collection do 
       get :wesprzyj_nas
       get :wolontariat
       get :o_nas
+        end
+      end
     end
   end
-  resources :articles
 
-end
+
+
 
